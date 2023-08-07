@@ -1,0 +1,14 @@
+{
+  "name": "on_call_backend",
+  "version": "1.0.0",
+  "description": "pocketbase serve --http localhost:8000\r ngrok http --domain=vocal-mutt-widely.ngrok-free.app 8000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "pocketbase serve --http localhost:8000",
+    "tunnel": "ngrok http --domain=vocal-mutt-widely.ngrok-free.app 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
