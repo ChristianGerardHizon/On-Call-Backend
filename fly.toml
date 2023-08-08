@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for dev-oncall on 2023-08-08T16:44:24+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "dev-oncall"
+primary_region = "sin"
+
+[build]
+
+[[mounts]]
+  source = "pb_data"
+  destination = "/pb/pb_data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 550
+    soft_limit = 500

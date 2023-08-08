@@ -1,6 +1,7 @@
+# https://github.com/pocketbase/pocketbase/discussions/537#discussion-4401414
 FROM alpine:latest
 
-ARG PB_VERSION=0.17.0
+ARG PB_VERSION=0.17.2
 
 RUN apk add --no-cache \
     unzip \
@@ -18,7 +19,7 @@ COPY ./pb_migrations /pb/pb_migrations
 # uncomment to copy the local pb_hooks dir into the container
 COPY ./pb_hooks /pb/pb_hooks
 
-COPY ./pb_data /pb/pb_data
+## COPY ./pb_data /pb/pb_data
 
 EXPOSE 8080
 
